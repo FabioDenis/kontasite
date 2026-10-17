@@ -16,10 +16,10 @@ Delivery: ask-on-risk. Test runner: Vitest (store logic) + `next build` / `eslin
 
 | ID | Specs | Route | Status | Evidence |
 |----|-------|-------|--------|----------|
-| T1 | S4, S5 | inline | open | — |
-| T2 | S2, S3, S4 | inline | open | — |
-| T3 | S1, S2, S3, S5 | inline | open | — |
-| T4 | S1 | inline | open | — |
+| T1 | S4, S5 | inline | done | d8892d1 |
+| T2 | S2, S3, S4 | inline | done | a6cc73f; Vitest RED (missing module) → GREEN 12/12 |
+| T3 | S1, S2, S3, S5 | inline | done | 7f3969f |
+| T4 | S1 | inline | done | lint clean, build static, Playwright 1440px + 390px: no page errors, 0px horizontal overflow |
 
 - T1: scaffold, tokens, fonts, logo, copied UI kit.
 - T2: mini Konta demo with shared store (sell → stock, caja, dashboard update); Vitest for store rules.
@@ -31,3 +31,6 @@ Delivery: ask-on-risk. Test runner: Vitest (store logic) + `next build` / `eslin
 - L1 (2026-10-17): "bien, mira mi referencia es https://www.billow.so/ quiero lograr algo asi, mi idea es presentar a Konta en la landing, q atraiga clientes explicar el sistema de forma simple y atractica, una landign animada y con info que sea clara [...] estos son los modulos del sistema, mi idea es mostrar las funcionalidades de forma interactiva y clara, podes investigar y ver que tecnologias, librerias lenguajes etc se podria utilizar"
 - L2: Konta stack confirmed by user (Next.js 16, Tailwind 4, shadcn/ui, Base UI, Framer Motion, Prisma/Neon). Repo confirmed: `Sistema-Negocio\sistema`.
 - L3: `C:\Users\USER` is itself a git repo; created a dedicated repo in `Landing-Konta` so commits never land in the home repo. Mockup moved to `design-reference/`.
+- L4: Copied Konta UI components ended unused (demo replicates tokens/classes in lighter pieces); removed them and their deps (@base-ui/react, cva, shadcn, tw-animate-css).
+- L5: Visual QA fixes: chart axis clipping, empty bar chart (percent heights without sized parent), mobile 3D tilt distortion (tilt now md+ only), POS grid min-content overflow.
+- L6: Pending from user: real domain, app URL, WhatsApp number, price, and whether partner distributors can be named (placeholders in `src/lib/site.ts` and `benefits.tsx`).
