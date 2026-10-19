@@ -7,7 +7,7 @@ export const site = {
   url: "https://konta.example.com", // TODO: real domain
   appUrl: "https://app.konta.example.com", // TODO: real app login URL
   description:
-    "Konta es el sistema para kioscos, almacenes y comercios de barrio. Vendés, cobrás y Konta ordena la caja, el stock y tus números.",
+    "Konta es el sistema de gestión para negocios y comercios. Vendés, cobrás y Konta ordena la caja, el stock, los clientes y tus números.",
   whatsappNumber: "5493760000000", // TODO: real WhatsApp number (international format, digits only)
   whatsappMessage: "Hola! Quiero conocer Konta para mi comercio.",
   price: "[PRECIO]", // TODO: real monthly price

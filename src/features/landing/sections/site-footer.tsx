@@ -25,11 +25,11 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-6xl flex-col justify-between gap-10 md:flex-row">
         <div className="max-w-xs">
           <div className="flex items-center gap-2">
-            <Image src="/konta-isotype.png" alt="" width={28} height={28} className="size-7" />
+            <Image src="/konta-logo-light.png" alt="" width={180} height={174} className="h-6 w-auto" />
             <span className="text-lg font-bold tracking-tight">Konta</span>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-            El sistema de gestión para comercios de barrio. Hecho en {site.location}.
+            El sistema de gestión para negocios y comercios. Hecho en {site.location}.
           </p>
         </div>
         <div className="flex gap-16">

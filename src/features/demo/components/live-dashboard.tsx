@@ -231,7 +231,7 @@ export function LiveDashboard({ className }: { className?: string }) {
             </span>
             <div className="min-w-0">
               <p className="text-sm font-medium text-white">Marta</p>
-              <p className="truncate text-xs text-white/50">Almacén Don Pedro</p>
+              <p className="truncate text-xs text-white/50">Mi Negocio</p>
             </div>
           </div>
         </aside>

@@ -2,15 +2,15 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { BookOpen, Candy, ShoppingBasket, Store } from "lucide-react";
+import { BookOpen, LayoutGrid, ShoppingBasket, Store } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "../components/section-heading";
 
 const types = [
   {
-    id: "kiosco",
-    label: "Kioscos",
-    icon: Candy,
+    id: "minorista",
+    label: "Comercios minoristas",
+    icon: Store,
     title: "Ventas rápidas, muchas por hora",
     text: "Cobrás en dos toques con el lector de código de barras y la caja de cada turno queda clara para el que entra después.",
   },
@@ -19,7 +19,7 @@ const types = [
     label: "Almacenes",
     icon: ShoppingBasket,
     title: "Fiado y stock de lo que más sale",
-    text: "Llevás la cuenta corriente de cada vecino y Konta te avisa cuando la yerba o el aceite están por terminarse.",
+    text: "Llevás la cuenta corriente de cada cliente y Konta te avisa cuando lo que más se vende está por terminarse.",
   },
   {
     id: "libreria",
@@ -31,7 +31,7 @@ const types = [
   {
     id: "poli",
     label: "Polirrubros",
-    icon: Store,
+    icon: LayoutGrid,
     title: "Un poco de todo",
     text: "Organizás por categorías y ves qué rubro te deja más en los reportes.",
   },

@@ -1,6 +1,6 @@
 # Konta — landing
 
-Marketing landing for Konta, the management system for neighborhood shops. It opens with a live Konta panel where sales arrive on their own, and walks through each module with guided, auto-playing simulations.
+Marketing landing for Konta, the management system for businesses and shops. It opens with a live Konta panel where sales arrive on their own, and walks through each module with guided, auto-playing simulations.
 
 ## Stack
 
