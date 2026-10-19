@@ -14,7 +14,6 @@ const groups = [
     title: "Contacto",
     links: [
       { label: "WhatsApp", href: whatsappUrl },
-      { label: "Ingresar", href: site.appUrl },
     ],
   },
 ];
@@ -51,7 +50,6 @@ export function SiteFooter() {
       </div>
       <div className="mx-auto mt-12 flex max-w-6xl flex-wrap justify-between gap-2 border-t border-line pt-6 text-sm text-ink-muted">
         <span>© 2026 Konta</span>
-        <span>Un producto de {site.author}</span>
       </div>
     </footer>
   );

@@ -4,11 +4,12 @@ import {
   DollarSign,
   FileSpreadsheet,
   NotebookPen,
+  FileCheck,
   Package,
-  QrCode,
   Receipt,
   ReceiptText,
   Wallet,
+  Weight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { site } from "@/lib/site";
@@ -24,8 +25,9 @@ const features = [
   { name: "Gastos", desc: "Lo que sale, registrado", icon: Receipt },
   { name: "Reportes", desc: "Ventas, resultados y deudas", icon: BarChart3 },
   { name: "Beneficios", desc: "Descuentos en distribuidoras", icon: BadgePercent },
-  { name: "Mercado Pago", desc: "Cobros con QR y Point", icon: QrCode, soon: true },
-  { name: "Importar desde Excel", desc: "Tu catálogo en un paso", icon: FileSpreadsheet, soon: true },
+  { name: "Importar desde Excel", desc: "Tu catálogo en un paso", icon: FileSpreadsheet },
+  { name: "Facturación electrónica", desc: "Factura desde cada venta", icon: FileCheck, soon: true },
+  { name: "Conexión con balanza", desc: "Pesá y vendé productos sueltos", icon: Weight, soon: true },
 ];
 
 export function AllIncluded() {
@@ -37,9 +39,9 @@ export function AllIncluded() {
           accent="Y sigue creciendo."
           description={`Un solo plan con todos los módulos: ${site.price} por mes.`}
         />
-        <ul className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+        <ul className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f, i) => (
-            <Reveal key={f.name} delay={(i % 5) * 0.06}>
+            <Reveal key={f.name} delay={(i % 4) * 0.06}>
               <li
                 className={cn(
                   "h-full rounded-2xl border p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-24px_rgba(10,16,32,.3)]",

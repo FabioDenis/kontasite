@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { cn } from "@/lib/utils";
-import { site, whatsappUrl } from "@/lib/site";
+import { whatsappUrl } from "@/lib/site";
 
 const links = [
   { href: "#demo", label: "Producto" },
@@ -43,9 +43,6 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <a href={site.appUrl} className="hidden px-3 text-[15px] font-medium text-ink-soft hover:text-ink sm:inline">
-            Ingresar
-          </a>
           <a
             href={whatsappUrl}
             target="_blank"
