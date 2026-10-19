@@ -12,8 +12,12 @@ Next.js 16 (App Router, statically prerendered), React 19, Tailwind CSS 4, Motio
 npm run dev     # local development
 npm test        # demo rules and simulation timeline (Vitest)
 npm run lint
-npm run build   # production build
+npm run build   # static export to out/
 ```
+
+## Deploy
+
+The site is a static export (`output: "export"`). On Cloudflare Pages: build command `npm run build`, output directory `out`, environment variable `NODE_VERSION=22`.
 
 ## Structure
 

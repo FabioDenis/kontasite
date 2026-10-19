@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  // The landing is fully static: export plain HTML/CSS/JS to `out/` for Cloudflare.
+  output: "export",
+  // Image optimization needs a server; the only images are small logos.
+  images: { unoptimized: true },
+  // cacheComponents / partialPrefetching enable PPR, which requires a server.
   turbopack: {
     rules: {
       "*.css": {
