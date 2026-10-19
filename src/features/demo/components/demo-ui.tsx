@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { animate, useInView, useReducedMotion } from "motion/react";
+import { animate, useReducedMotion } from "motion/react";
 import type { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { formatARS } from "../model/demo-model";
@@ -38,40 +38,6 @@ export function AnimatedAmount({
     previous.current = value;
     return () => controls.stop();
   }, [value, format, reduce]);
-
-  return (
-    <span ref={ref} className={cn("tabular-nums", className)}>
-      {format(value)}
-    </span>
-  );
-}
-
-/** Counts up from zero the first time it scrolls into view. */
-export function CountUp({
-  value,
-  format = formatARS,
-  className,
-}: {
-  value: number;
-  format?: (value: number) => string;
-  className?: string;
-}) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-10% 0px" });
-  const reduce = useReducedMotion();
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node || !inView || reduce) return;
-    const controls = animate(0, value, {
-      duration: 1.2,
-      ease: [0.2, 0.7, 0.2, 1],
-      onUpdate: (v) => {
-        node.textContent = format(v);
-      },
-    });
-    return () => controls.stop();
-  }, [inView, value, format, reduce]);
 
   return (
     <span ref={ref} className={cn("tabular-nums", className)}>
