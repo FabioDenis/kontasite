@@ -17,7 +17,7 @@ npm run build   # static export to out/
 
 ## Deploy
 
-The site is a static export (`output: "export"`). On Cloudflare Pages: build command `npm run build`, output directory `out`, environment variable `NODE_VERSION=22`.
+The site is a static export (`output: "export"`) deployed as a Cloudflare Worker with static assets. Cloudflare builds with `npm run build` and deploys with `npx wrangler deploy`, which reads `wrangler.jsonc` and uploads `out/`. The `name` in `wrangler.jsonc` must match the Worker name.
 
 ## Structure
 
