@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     locale: "es_AR",
     type: "website",
   },
-  icons: { icon: "/konta-isotype.png" },
+  icons: { icon: "/konta-logo-light.png" },
 };
 
 export const viewport: Viewport = {

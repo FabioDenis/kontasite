@@ -32,7 +32,7 @@ export function SiteHeader() {
         )}
       >
         <a href="#top" className="flex items-center gap-2" aria-label="Konta, inicio">
-          <Image src="/konta-isotype.png" alt="" width={32} height={32} className="size-8" priority />
+          <Image src="/konta-logo-light.png" alt="" width={180} height={174} className="h-7 w-auto" priority />
           <span className="text-lg font-bold tracking-tight">Konta</span>
         </a>
         <nav className="hidden items-center gap-7 md:flex" aria-label="Principal">

@@ -33,9 +33,9 @@ function BrandLockup() {
         initial={reduce ? false : { opacity: 0, scale: 0.6, rotate: -14 }}
         animate={{ opacity: 1, scale: 1, rotate: 0 }}
         transition={{ type: "spring", stiffness: 140, damping: 14, delay: 0.05 }}
-        className="relative block h-[0.82em] w-[0.55em] shrink-0"
+        className="relative block h-[0.8em] w-[0.83em] shrink-0"
       >
-        <Image src="/konta-mark.png" alt="" fill sizes="110px" priority className="object-contain" />
+        <Image src="/konta-logo-light.png" alt="" fill sizes="(min-width: 1024px) 110px, 70px" priority className="object-contain" />
       </motion.span>
       <span className="flex font-extrabold tracking-[-0.055em] text-brand">
         {"Konta".split("").map((letter, i) => (
@@ -87,8 +87,8 @@ export function Hero() {
 
         <FadeUp delay={0.7}>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft sm:text-xl text-pretty">
-            El sistema para kioscos, almacenes y comercios de barrio. Vendés, cobrás y Konta ordena la caja, el stock y tus
-            números.
+            El sistema de gestión para negocios y comercios. Vendés, cobrás y Konta ordena la caja, el stock, los clientes
+            y tus números.
           </p>
         </FadeUp>
 
