@@ -1,10 +1,11 @@
 "use client";
 
-import { useRef, useSyncExternalStore } from "react";
+import { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { ArrowDown, ArrowRight, Sparkles } from "lucide-react";
 import { DemoWindow } from "@/features/demo/components/demo-window";
 import { whatsappUrl } from "@/lib/site";
+import { useMediaQuery } from "@/lib/use-media-query";
 
 const ease = [0.2, 0.7, 0.2, 1] as const;
 
@@ -22,27 +23,11 @@ function FadeUp({ delay, children, className }: { delay: number; children: React
   );
 }
 
-const wideQuery = "(min-width: 768px)";
-
-function subscribeWide(onChange: () => void) {
-  const media = window.matchMedia(wideQuery);
-  media.addEventListener("change", onChange);
-  return () => media.removeEventListener("change", onChange);
-}
-
-/** The 3D tilt distorts the demo on narrow screens, so it only runs from tablet up. */
-function useIsWide() {
-  return useSyncExternalStore(
-    subscribeWide,
-    () => window.matchMedia(wideQuery).matches,
-    () => false,
-  );
-}
-
 export function Hero() {
   const demoRef = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
-  const tilt = useIsWide() && !reduce;
+  // The 3D tilt distorts the demo on narrow screens, so it only runs from tablet up.
+  const tilt = useMediaQuery("(min-width: 768px)") && !reduce;
   const { scrollYProgress } = useScroll({ target: demoRef, offset: ["start end", "start 30%"] });
   const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
   const rotateX = useTransform(scrollYProgress, [0, 1], [14, 0]);
