@@ -5,10 +5,10 @@ import { Check, X } from "lucide-react";
 import { SectionHeading } from "../components/section-heading";
 
 const pairs = [
-  ["El fiado en un cuaderno que nadie entiende", "Cada cliente con su saldo al día"],
-  ["La caja no cierra y no sabés por qué", "Sabés cuánto efectivo tiene que haber"],
-  ["“¿Me queda yerba?” y vas a fijarte al depósito", "El stock lo ves en pantalla, con avisos"],
-  ["A fin de mes, sumar tickets con la calculadora", "El mes resumido en un solo reporte"],
+  ["Las ventas anotadas en cuadernos o planillas", "Ventas registradas y organizadas automáticamente"],
+  ["Cuentas pendientes difíciles de seguir", "Cada cliente con su cuenta corriente al día"],
+  ["Diferencias de caja al cerrar el día", "Control de caja con ingresos y egresos claros"],
+  ["Stock sin control y números poco claros", "Inventario actualizado y reportes en un solo lugar"],
 ];
 
 const ease = [0.2, 0.7, 0.2, 1] as const;
@@ -17,7 +17,7 @@ export function BeforeAfter() {
   return (
     <section className="px-4 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading title="Menos cuentas a mano." accent="Más tiempo para atender." />
+        <SectionHeading title="Menos tiempo haciendo cuentas." accent="Más tiempo para tu negocio." />
 
         <div className="mt-14 grid gap-4 md:grid-cols-2">
           <div className="rounded-3xl border border-line bg-white/60 p-7">
