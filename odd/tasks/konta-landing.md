@@ -14,6 +14,8 @@ Delivery: ask-on-risk. Test runner: Vitest (store logic) + `next build` / `eslin
 - S6 — Guided step-by-step simulation per module: "se podria poner una simulacion como si fuera el paso a paso para utilizar cada modulo por ejemplo tocas punto de venta, y muestra de forma simple como realizar una venta, en gastos lo mismo, en caja te deja navegar y muestra como cerrar caja y muestra que se puede descargar un pdf y mustra como se ve, en productos muetra como se crea un producto [...] como si fuera una simulacion que arranca cuando tocas el modulo".
 - S7 — Placement: the Funciones section ("mejor debajo en la seccion de funciones que va mostrando modulo a modulo, con una pequeña descripcion"). Decision: hero keeps the free playable demo; Funciones shows one auto-playing simulation per module with numbered steps, starting when the module enters view.
 - S8 — Flows follow the user's screenshots (2026-10-19): Productos (panel → "Nuevo producto" modal → "Producto creado correctamente."), Inventario (search with stock data), Punto de Venta (search → "Cobrar" modal with payment method → "¡Venta registrada!"), Historial de Ventas (search and filter), Caja ("Cerrar caja" → "Caja cerrada correctamente" → "Descargar PDF" → "REPORTE DE CAJA"), Clientes (debt follow-up; detail panel from app code: "Saldo pendiente", "Días de mora", "Movimientos de cuenta", "Aplicar recargo"), Gastos ("Nuevo gasto" modal → "Registrar gasto"), Reportes (ventas). Vista General: "es solo navegacion vista" (stays in the hero demo).
+- S9 — Hero brand: "me gustaria que el nombre y el logo predomine en la imagen del principio con el eslogan". Slogan: "Todo lo que pasa en tu negocio, en un solo lugar."
+- S10 — Hero product section no longer duplicates Funciones: the navigable demo becomes a non-interactive "Konta en vivo" Vista General where sales arrive on their own (user asked: "que me recomendas para la seccion de Producto donde se puede navegar entre modulos [...] ya que debajo se muestra el funcionamiento").
 
 ## Tasks
 
@@ -26,6 +28,8 @@ Delivery: ask-on-risk. Test runner: Vitest (store logic) + `next build` / `eslin
 | T5 | S6 | inline | done | 7dff879; Vitest RED (missing module) → GREEN 21/21 |
 | T6 | S6, S8 | inline | done | 4febcad |
 | T7 | S7 | inline | done | 23c9b06 |
+| T9 | S9 | inline | done | b6dda49 |
+| T10 | S10 | inline | done | d2de791; Vitest RED (topSellers missing) → GREEN; Playwright 1440px + 390px: no page errors, 0px overflow |
 | T8 | S6, S7 | inline | done | lint clean, build static, Playwright 1440px (8 modules) + 390px: no page errors, 0px overflow |
 
 - T1: scaffold, tokens, fonts, logo, copied UI kit.
@@ -48,3 +52,5 @@ Delivery: ask-on-risk. Test runner: Vitest (store logic) + `next build` / `eslin
 - L7 (2026-10-19): user asked for step-by-step simulations per module; placement decided in Funciones (hero keeps free demo). Order follows a shop's day: Productos, Inventario, Punto de Venta, Historial, Gastos, Clientes, Caja, Reportes.
 - L8: QA fixes: backdrop-filter inside the scaled stage mirrored edges in Chromium (removed blur); each loop remounts the screen to avoid exit animations overlapping; POS search box stretched in a flex column.
 - L9: The "cliente con mora" screenshot was a duplicate of the list; detail panel labels taken from app code (customer-detail-panel.tsx, apply-surcharge-dialog.tsx).
+- L10 (2026-10-19): user: "este eslogan Todo lo que pasa en tu negocio, en un solo lugar." — taken as approval of the hero brand lockup + live panel proposal.
+- L11: Removed the navigable demo (DemoWindow, screens, Zustand store) and unused model helpers (removeFromCart, salesByMethod); logo mark cropped from the isotype PNG because the SVGs in the app repo are an older logo version.
