@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
-import { ArrowDown, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 import { LiveDashboard } from "@/features/demo/components/live-dashboard";
 import { whatsappUrl } from "@/lib/site";
 import { useMediaQuery } from "@/lib/use-media-query";
@@ -109,18 +109,8 @@ export function Hero() {
           </a>
         </FadeUp>
 
-        <FadeUp delay={0.95} className="mt-5 flex flex-col items-center gap-3">
-          <p className="text-sm text-ink-muted">Funciona desde el navegador · Sin instalar nada</p>
-          <a
-            href="#beneficios"
-            className="inline-flex items-center gap-2 rounded-full border border-line bg-white py-1 pl-1 pr-3 text-xs text-ink-soft shadow-sm transition-colors hover:border-brand/40 sm:text-sm"
-          >
-            <span className="inline-flex items-center gap-1 rounded-full bg-brand-soft px-2 py-0.5 text-xs font-semibold text-brand">
-              <Sparkles className="size-3" /> Nuevo
-            </span>
-            Descuentos en distribuidoras para socios
-            <ArrowRight className="size-3.5" />
-          </a>
+        <FadeUp delay={0.95}>
+          <p className="mt-5 text-sm text-ink-muted">Funciona desde el navegador · Sin instalar nada</p>
         </FadeUp>
       </div>
 

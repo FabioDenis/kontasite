@@ -166,7 +166,6 @@ export function Features() {
           eyebrow="Funciones"
           title="Mirá cómo se usa."
           accent="Paso a paso, módulo por módulo."
-          description="Cada simulación arranca sola cuando llegás al módulo. Pausala, repetila o tocá un paso para ir directo."
         />
         {isDesktop ? (
           <DesktopFeatures />
