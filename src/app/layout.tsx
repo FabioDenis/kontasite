@@ -10,10 +10,10 @@ const caveat = Caveat({ variable: "--font-caveat", subsets: ["latin"], weight: "
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: "Konta — Sistema de gestión para comercios de barrio",
+  title: "Konta — Todo lo que pasa en tu negocio, en un solo lugar",
   description: site.description,
   openGraph: {
-    title: "Konta — De la venta al cierre de caja",
+    title: "Konta — Todo lo que pasa en tu negocio, en un solo lugar",
     description: site.description,
     locale: "es_AR",
     type: "website",
