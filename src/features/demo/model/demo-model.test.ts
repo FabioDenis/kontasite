@@ -5,8 +5,8 @@ import {
   checkout,
   createInitialState,
   expectedCash,
-  removeFromCart,
   stockAlerts,
+  topSellers,
   type DemoState,
 } from "./demo-model";
 
@@ -34,14 +34,6 @@ describe("addToCart", () => {
     const initial = createInitialState();
 
     expect(addToCart(initial, "nope")).toBe(initial);
-  });
-});
-
-describe("removeFromCart", () => {
-  it("removes the whole line from the cart", () => {
-    const state = removeFromCart(withCart(createInitialState(), { coca: 2, agua: 1 }), "coca");
-
-    expect(state.cart).toEqual({ agua: 1 });
   });
 });
 
@@ -121,5 +113,22 @@ describe("stockAlerts", () => {
 describe("cartTotal", () => {
   it("sums price times quantity of every line", () => {
     expect(cartTotal(withCart(createInitialState(), { coca: 2, agua: 1 }))).toBe(4800);
+  });
+});
+
+describe("topSellers", () => {
+  it("ranks products by units sold, leaving out the unsold ones", () => {
+    let state = withCart(createInitialState(), { agua: 1, coca: 3 });
+    state = checkout(state, { method: "efectivo" });
+    state = checkout(withCart(state, { agua: 1 }), { method: "tarjeta" });
+
+    expect(topSellers(state)).toEqual([
+      { id: "coca", name: "Coca Cola 500 ml", units: 3, revenue: 5400 },
+      { id: "agua", name: "Agua mineral 500 ml", units: 2, revenue: 2400 },
+    ]);
+  });
+
+  it("is empty before any sale of the session", () => {
+    expect(topSellers(createInitialState())).toEqual([]);
   });
 });

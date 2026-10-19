@@ -126,14 +126,6 @@ export function addToCart(state: DemoState, productId: string): DemoState {
   };
 }
 
-export function removeFromCart(state: DemoState, productId: string): DemoState {
-  if (!(productId in state.cart)) return state;
-
-  const cart = { ...state.cart };
-  delete cart[productId];
-  return { ...state, cart };
-}
-
 export function cartLines(state: DemoState) {
   return state.products
     .filter((p) => (state.cart[p.id] ?? 0) > 0)
@@ -213,6 +205,20 @@ export function stockAlerts(state: DemoState): StockAlert[] {
     .sort((a, b) => a.stock - b.stock);
 }
 
+export type TopSeller = { id: string; name: string; units: number; revenue: number };
+
+/** Products sold during the session (stock consumed since the initial state), best first. */
+export function topSellers(state: DemoState): TopSeller[] {
+  const initial = new Map(createInitialState().products.map((p) => [p.id, p.stock]));
+  return state.products
+    .map((p) => {
+      const units = (initial.get(p.id) ?? p.stock) - p.stock;
+      return { id: p.id, name: p.name, units, revenue: units * p.price };
+    })
+    .filter((p) => p.units > 0)
+    .sort((a, b) => b.units - a.units || b.revenue - a.revenue);
+}
+
 export function todaySales(state: DemoState): number {
   return state.sales.reduce((sum, s) => sum + s.total, 0);
 }
@@ -223,12 +229,6 @@ export function cashSales(state: DemoState): number {
 
 export function expectedCash(state: DemoState): number {
   return state.cashOpening + cashSales(state) - state.cashOut;
-}
-
-export function salesByMethod(state: DemoState): Record<PaymentMethod, number> {
-  const totals: Record<PaymentMethod, number> = { efectivo: 0, transferencia: 0, tarjeta: 0, cuenta: 0 };
-  for (const sale of state.sales) totals[sale.method] += sale.total;
-  return totals;
 }
 
 export function weekSeries(state: DemoState): number[] {

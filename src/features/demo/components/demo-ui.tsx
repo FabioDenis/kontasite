@@ -46,15 +46,6 @@ export function AnimatedAmount({
   );
 }
 
-export function ScreenHeader({ title, subtitle }: { title: string; subtitle: string }) {
-  return (
-    <div className="border-b border-border pb-3">
-      <h3 className="text-lg font-semibold tracking-tight text-foreground sm:text-xl">{title}</h3>
-      <p className="mt-0.5 text-xs text-muted-foreground sm:text-sm">{subtitle}</p>
-    </div>
-  );
-}
-
 export function Kpi({
   label,
   value,
