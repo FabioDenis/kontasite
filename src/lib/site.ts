@@ -14,9 +14,10 @@ export const site = {
   location: "Posadas, Misiones",
   /**
    * Public usage stats endpoint of the Konta app (GET /api/public/stats).
-   * Set NEXT_PUBLIC_KONTA_STATS_URL at build time; while empty, "Konta en números" stays hidden.
+   * NEXT_PUBLIC_KONTA_STATS_URL overrides it at build time. If the endpoint fails,
+   * "Konta en números" stays hidden.
    */
-  statsUrl: process.env.NEXT_PUBLIC_KONTA_STATS_URL ?? "",
+  statsUrl: process.env.NEXT_PUBLIC_KONTA_STATS_URL ?? "https://sistema-saas-negocio.vercel.app/api/public/stats",
 } as const;
 
 export const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(site.whatsappMessage)}`;
