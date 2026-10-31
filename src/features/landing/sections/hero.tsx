@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { LiveDashboard } from "@/features/demo/components/live-dashboard";
+import { KontaNumbers } from "@/features/stats/konta-numbers";
 import { whatsappUrl } from "@/lib/site";
 import { useMediaQuery } from "@/lib/use-media-query";
 
@@ -137,6 +138,7 @@ export function Hero() {
         <p className="mt-5 text-center text-sm text-ink-muted">
           Cada venta actualiza sola la caja, el stock, las alertas y tus números. Así trabaja Konta mientras vos atendés.
         </p>
+        <KontaNumbers />
       </div>
     </section>
   );

@@ -12,6 +12,11 @@ export const site = {
   whatsappMessage: "Hola! Quiero conocer Konta para mi comercio.",
   price: "[PRECIO]", // TODO: real monthly price
   location: "Posadas, Misiones",
+  /**
+   * Public usage stats endpoint of the Konta app (GET /api/public/stats).
+   * Set NEXT_PUBLIC_KONTA_STATS_URL at build time; while empty, "Konta en números" stays hidden.
+   */
+  statsUrl: process.env.NEXT_PUBLIC_KONTA_STATS_URL ?? "",
 } as const;
 
 export const whatsappUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(site.whatsappMessage)}`;
