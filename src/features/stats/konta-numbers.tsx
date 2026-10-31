@@ -75,7 +75,7 @@ function formatTime(date: Date): string {
   return date.toLocaleTimeString("es-AR", { hour: "2-digit", minute: "2-digit" });
 }
 
-/** "Konta en números": real, anonymous usage counts from every business using Konta. */
+/** "Así se mueve Konta": real, anonymous usage counts from every business using Konta. */
 export function KontaNumbers() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { margin: "200px 0px" });
@@ -110,9 +110,9 @@ export function KontaNumbers() {
                 id="konta-numbers-title"
                 className="text-[clamp(32px,4.4vw,54px)] font-bold leading-[1.05] tracking-[-0.04em]"
               >
-                Konta en números.
+                Así se mueve Konta.
                 <br />
-                <span className="text-white/45">Y crece todos los días.</span>
+                <span className="text-white/45">Cada venta, cada producto, cada día.</span>
               </h2>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-sm font-medium text-white/80">
                 <span className="relative flex size-2">
