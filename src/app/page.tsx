@@ -3,6 +3,7 @@ import { Hero } from "@/features/landing/sections/hero";
 import { Steps } from "@/features/landing/sections/steps";
 import { Features } from "@/features/landing/sections/features";
 import { BeforeAfter } from "@/features/landing/sections/before-after";
+import { KontaNumbers } from "@/features/stats/konta-numbers";
 import { BusinessTypes } from "@/features/landing/sections/business-types";
 import { Benefits } from "@/features/landing/sections/benefits";
 import { AllIncluded } from "@/features/landing/sections/all-included";
@@ -19,6 +20,7 @@ export default function Home() {
         <Steps />
         <Features />
         <BeforeAfter />
+        <KontaNumbers />
         <BusinessTypes />
         <Benefits />
         <AllIncluded />
