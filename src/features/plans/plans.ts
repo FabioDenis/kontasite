@@ -29,7 +29,7 @@ export const plans: Plan[] = [
       { text: "Hasta 1.000 productos", bold: "1.000" },
       { text: "Todos los módulos de gestión" },
       { text: "Acceso desde PC, tablet o celular" },
-      { text: "Soporte por WhatsApp en horario comercial" },
+      { text: "Capacitación y soporte incluidos" },
       { text: "Sin facturación electrónica", excluded: true },
     ],
   },
@@ -44,8 +44,7 @@ export const plans: Plan[] = [
       { text: "Hasta 5.000 productos", bold: "5.000" },
       { text: "Todo lo del Básico" },
       { text: "Facturación electrónica ARCA para monotributistas, con la configuración incluida", bold: "Facturación electrónica ARCA" },
-      { text: "Capacitación inicial por videollamada" },
-      { text: "Soporte prioritario" },
+      { text: "Capacitación y soporte incluidos" },
     ],
   },
   {
@@ -57,9 +56,7 @@ export const plans: Plan[] = [
       { text: "Usuarios y productos ilimitados", bold: "ilimitados" },
       { text: "Todo lo del Standard" },
       { text: "Carga inicial de productos a cargo de Konta" },
-      { text: "Capacitación para todo el equipo" },
-      // TODO: confirm the response time (the source material has it as "[2]").
-      { text: "Soporte con respuesta en menos de 2 horas hábiles" },
+      { text: "Capacitación y soporte incluidos" },
     ],
   },
 ];

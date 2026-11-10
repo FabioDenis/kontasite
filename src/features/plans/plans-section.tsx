@@ -24,7 +24,7 @@ export function Plans() {
           eyebrow="Planes"
           title="Un plan para cada etapa"
           accent="de tu comercio."
-          description="Todos incluyen ventas, caja, stock, clientes con cuenta corriente, gastos y reportes. Cambian el tamaño del negocio y el nivel de acompañamiento."
+          description="Todos incluyen ventas, caja, stock, clientes con cuenta corriente, gastos y reportes, con capacitación y soporte. Cambia el tamaño del negocio."
         />
 
         <ul className="mt-14 grid items-stretch gap-4 lg:grid-cols-3">
