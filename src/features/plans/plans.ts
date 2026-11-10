@@ -43,7 +43,7 @@ export const plans: Plan[] = [
       { text: "5 usuarios con roles", bold: "5" },
       { text: "Hasta 5.000 productos", bold: "5.000" },
       { text: "Todo lo del Básico" },
-      { text: "Facturación electrónica ARCA, con la configuración incluida", bold: "Facturación electrónica ARCA" },
+      { text: "Facturación electrónica ARCA para monotributistas, con la configuración incluida", bold: "Facturación electrónica ARCA" },
       { text: "Capacitación inicial por videollamada" },
       { text: "Soporte prioritario" },
     ],

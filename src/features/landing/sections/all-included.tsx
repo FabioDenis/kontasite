@@ -25,7 +25,7 @@ const features = [
   { name: "Reportes", desc: "Ventas, resultados y deudas", icon: BarChart3 },
   { name: "Beneficios", desc: "Descuentos en distribuidoras", icon: BadgePercent },
   { name: "Importar desde Excel", desc: "Tu catálogo en un paso", icon: FileSpreadsheet },
-  { name: "Facturación electrónica", desc: "Factura desde cada venta", icon: FileCheck, soon: true },
+  { name: "Facturación electrónica", desc: "Para monotributistas, desde cada venta", icon: FileCheck },
   { name: "Conexión con balanza", desc: "Pesá y vendé productos sueltos", icon: Weight, soon: true },
 ];
 
