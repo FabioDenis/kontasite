@@ -36,20 +36,9 @@ export function Plans() {
                   delay={i * 0.08}
                   className={cn(
                     "relative flex h-full flex-col rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1",
-                    dark ? "bg-ink text-white" : "bg-white",
-                    plan.recommended
-                      ? "border-2 border-brand shadow-[0_30px_60px_-30px_rgba(19,102,240,.45)]"
-                      : dark
-                        ? "border border-ink"
-                        : "border border-line",
+                    dark ? "border border-ink bg-ink text-white" : "border border-line bg-white",
                   )}
                 >
-                  {plan.recommended ? (
-                    <span className="absolute -top-3 right-6 rounded-full bg-brand px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
-                      Recomendado
-                    </span>
-                  ) : null}
-
                   <h3 className="text-2xl font-bold tracking-tight">{plan.name}</h3>
                   <p className={cn("mt-2 min-h-[4.5em] text-[15px] leading-relaxed", dark ? "text-white/65" : "text-ink-soft")}>
                     {plan.tagline}
@@ -87,11 +76,7 @@ export function Plans() {
                     rel="noopener noreferrer"
                     className={cn(
                       "mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-base font-semibold transition-all hover:-translate-y-0.5",
-                      plan.recommended
-                        ? "bg-brand text-white hover:bg-brand-strong"
-                        : dark
-                          ? "bg-white text-ink hover:bg-white/90"
-                          : "bg-ink text-white hover:bg-[#1b2336]",
+                      dark ? "bg-white text-ink hover:bg-white/90" : "bg-ink text-white hover:bg-[#1b2336]",
                     )}
                   >
                     Quiero el {plan.name} <ArrowRight className="size-4" />

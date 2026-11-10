@@ -15,7 +15,6 @@ export type Plan = {
   /** Monthly price in ARS. */
   price: number;
   features: PlanFeature[];
-  recommended?: boolean;
 };
 
 export const plans: Plan[] = [
@@ -38,7 +37,6 @@ export const plans: Plan[] = [
     name: "Standard",
     tagline: "Para el comercio que factura. Ideal para negocios con empleados que emiten facturas.",
     price: 40000,
-    recommended: true,
     features: [
       { text: "5 usuarios con roles", bold: "5" },
       { text: "Hasta 5.000 productos", bold: "5.000" },

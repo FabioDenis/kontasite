@@ -2,9 +2,8 @@ import { describe, expect, it } from "vitest";
 import { formatPlanPrice, planWhatsappUrl, plans } from "./plans";
 
 describe("plans", () => {
-  it("lists the three plans in order, with one recommended", () => {
+  it("lists the three plans in order", () => {
     expect(plans.map((p) => p.name)).toEqual(["Básico", "Standard", "Premium"]);
-    expect(plans.filter((p) => p.recommended).map((p) => p.name)).toEqual(["Standard"]);
   });
 
   it("formats the monthly price in pesos", () => {
