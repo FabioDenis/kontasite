@@ -7,6 +7,7 @@ import { KontaNumbers } from "@/features/stats/konta-numbers";
 import { BusinessTypes } from "@/features/landing/sections/business-types";
 import { Benefits } from "@/features/landing/sections/benefits";
 import { AllIncluded } from "@/features/landing/sections/all-included";
+import { Plans } from "@/features/plans/plans-section";
 import { Faq } from "@/features/landing/sections/faq";
 import { FinalCta } from "@/features/landing/sections/final-cta";
 import { SiteFooter } from "@/features/landing/sections/site-footer";
@@ -24,6 +25,7 @@ export default function Home() {
         <BusinessTypes />
         <Benefits />
         <AllIncluded />
+        <Plans />
         <Faq />
         <FinalCta />
       </main>

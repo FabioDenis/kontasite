@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Plus } from "lucide-react";
-import { site } from "@/lib/site";
+import { formatPlanPrice, plans } from "@/features/plans/plans";
 import { SectionHeading } from "../components/section-heading";
 
 const faqs = [
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "¿Cuánto cuesta?",
-    a: `${site.price} por mes. Escribinos y te contamos los planes.`,
+    a: `Desde ${formatPlanPrice(plans[0].price)} por mes. Hay tres planes según el tamaño de tu negocio: los ves más arriba, en Planes.`,
   },
 ];
 

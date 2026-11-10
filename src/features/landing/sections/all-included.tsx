@@ -12,7 +12,6 @@ import {
   Weight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { site } from "@/lib/site";
 import { Reveal } from "../components/reveal";
 import { SectionHeading } from "../components/section-heading";
 
@@ -37,7 +36,7 @@ export function AllIncluded() {
         <SectionHeading
           title="Todo incluido."
           accent="Y sigue creciendo."
-          description={`Un solo plan con todos los módulos: ${site.price} por mes.`}
+          description="Todos los planes traen los módulos de gestión."
         />
         <ul className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f, i) => (

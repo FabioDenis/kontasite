@@ -27,7 +27,8 @@ The site is a static export (`output: "export"`) deployed as a Cloudflare Worker
   - `engine/timeline.ts`: pure timeline, with tests next to it.
   - `modules/`: one simulation per Konta module.
 - `src/features/landing`: page sections and shared motion helpers.
-- `src/lib/site.ts`: business data. The domain and the price are still **placeholders** marked `TODO`.
+- `src/lib/site.ts`: business data. The domain is still a **placeholder** marked `TODO`.
+- `src/features/plans`: plans data (`plans.ts`) and the Planes section.
 - `design-reference/`: the original design mockup, kept as visual reference only.
 
 The demo reuses the Konta app's design tokens (`globals.css`, "Deep Blue Tech") so it looks like the real product.

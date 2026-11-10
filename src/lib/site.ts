@@ -10,7 +10,6 @@ export const site = {
   /** 376 4333078, in international format: 54 (Argentina) + 9 (mobile) + area code + number. */
   whatsappNumber: "5493764333078",
   whatsappMessage: "Hola! Quiero conocer Konta para mi comercio.",
-  price: "[PRECIO]", // TODO: real monthly price
   location: "Posadas, Misiones",
   /**
    * Public usage stats endpoint of the Konta app (GET /api/public/stats).
