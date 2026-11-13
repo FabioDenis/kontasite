@@ -25,7 +25,7 @@ export const plans: Plan[] = [
     price: 20000,
     features: [
       { text: "2 usuarios", bold: "2" },
-      { text: "Hasta 1.000 productos", bold: "1.000" },
+      { text: "Hasta 500 productos", bold: "500" },
       { text: "Todos los módulos de gestión" },
       { text: "Acceso desde PC, tablet o celular" },
       { text: "Capacitación y soporte incluidos" },
