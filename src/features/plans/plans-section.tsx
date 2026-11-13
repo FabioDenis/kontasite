@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Minus } from "lucide-react";
+import { ArrowRight, Check, Minus, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/features/landing/components/reveal";
 import { SectionHeading } from "@/features/landing/components/section-heading";
@@ -27,7 +27,14 @@ export function Plans() {
           description="Todos incluyen ventas, caja, stock, clientes con cuenta corriente, gastos y reportes, con capacitación y soporte. Cambia el tamaño del negocio."
         />
 
-        <ul className="mt-14 grid items-stretch gap-4 lg:grid-cols-3">
+        <Reveal className="mt-8 flex justify-center">
+          <p className="inline-flex items-center gap-2 rounded-full bg-brand-soft px-4 py-2 text-sm font-semibold text-brand">
+            <Sparkles className="size-4" aria-hidden />
+            Precios de lanzamiento
+          </p>
+        </Reveal>
+
+        <ul className="mt-10 grid items-stretch gap-4 lg:grid-cols-3">
           {plans.map((plan, i) => {
             const dark = plan.id === "premium";
             return (
@@ -87,7 +94,9 @@ export function Plans() {
           })}
         </ul>
 
-        <p className="mt-8 text-center text-sm text-ink-muted">Podés subir o bajar de plan cuando lo necesites.</p>
+        <p className="mt-8 text-center text-sm text-ink-muted">
+          Precios de lanzamiento: pueden cambiar más adelante. Podés subir o bajar de plan cuando lo necesites.
+        </p>
       </div>
     </section>
   );
